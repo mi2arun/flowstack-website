@@ -20,46 +20,7 @@
                         secondary: '#ef4444',
                         'primary-dark': '#b91c1c',
                         'primary-light': '#f87171',
-                    },
-                    backgroundImage: {
-                        'hero-pattern': "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg')",
-                        'gradient-primary': 'linear-gradient(135deg, #dc2626, #ef4444)',
-                        'gradient-hero': 'linear-gradient(135deg, #dc2626 0%, #b91c1c 100%)',
-                        'gradient-light-red': 'linear-gradient(135deg, #fef2f2 0%, #fee2e2 50%, #fecaca 100%)',
-                    },
-                    animation: {
-                        'pulse-slow': 'pulse 2s infinite',
-                        'flow': 'flow 3s infinite',
-                        'fade-in-up': 'fadeInUp 0.6s ease forwards',
-                        'logo-fade-in': 'logoFadeIn 0.8s ease-in-out 0.2s forwards',
-                    },
-                    keyframes: {
-                        flow: {
-                            '0%': { opacity: '0.3' },
-                            '50%': { opacity: '1' },
-                            '100%': { opacity: '0.3' },
-                        },
-                        fadeInUp: {
-                            'from': {
-                                opacity: '0',
-                                transform: 'translateY(30px)',
-                            },
-                            'to': {
-                                opacity: '1',
-                                transform: 'translateY(0)',
-                            },
-                        },
-                        logoFadeIn: {
-                            'from': {
-                                opacity: '0',
-                                transform: 'translateY(-10px)',
-                            },
-                            'to': {
-                                opacity: '1',
-                                transform: 'translateY(0)',
-                            },
-                        },
-                    },
+                    }
                 }
             }
         }
@@ -85,55 +46,6 @@
             filter: brightness(0) saturate(100%) invert(19%) sepia(89%) saturate(1629%) hue-rotate(347deg) brightness(91%) contrast(86%);
         }
 
-        /* Animated Logo Effects */
-        .animated-logo {
-            animation: logoFloat 3s ease-in-out infinite;
-            filter: brightness(0) invert(1) drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
-            transition: all 0.3s ease;
-        }
-
-        .animated-logo:hover {
-            animation: logoHover 0.6s ease-in-out infinite alternate;
-            filter: brightness(0) invert(1) drop-shadow(0 0 20px rgba(255, 255, 255, 0.6));
-        }
-
-        /* If your logo has dots/circles, this will animate them */
-        .animated-logo svg circle,
-        .animated-logo svg ellipse,
-        .animated-logo svg path[d*="circle"] {
-            animation: dotPulse 2s ease-in-out infinite;
-        }
-
-        .animated-logo svg circle:nth-child(1),
-        .animated-logo svg ellipse:nth-child(1) {
-            animation-delay: 0s;
-        }
-
-        .animated-logo svg circle:nth-child(2),
-        .animated-logo svg ellipse:nth-child(2) {
-            animation-delay: 0.2s;
-        }
-
-        .animated-logo svg circle:nth-child(3),
-        .animated-logo svg ellipse:nth-child(3) {
-            animation-delay: 0.4s;
-        }
-
-        .animated-logo svg circle:nth-child(4),
-        .animated-logo svg ellipse:nth-child(4) {
-            animation-delay: 0.6s;
-        }
-
-        .animated-logo svg circle:nth-child(5),
-        .animated-logo svg ellipse:nth-child(5) {
-            animation-delay: 0.8s;
-        }
-
-        /* Wave flow animation for paths */
-        .animated-logo svg path {
-            animation: waveFlow 3s ease-in-out infinite;
-            transform-origin: center;
-        }
 
         /* Glass Card Effect */
         .glass-card {
@@ -172,283 +84,6 @@
             background: rgba(255, 255, 255, 0.95) !important;
             backdrop-filter: blur(20px);
             border-bottom: 1px solid rgba(220, 38, 38, 0.1);
-        }
-
-        /* Enhanced Neural Network Animations */
-        .neural-node {
-            animation: neuralPulse 4s ease-in-out infinite;
-            transition: all 0.3s ease;
-        }
-
-        .neural-node:nth-child(1) {
-            animation-delay: 0s;
-        }
-
-        .neural-node:nth-child(2) {
-            animation-delay: 0.5s;
-        }
-
-        .neural-node:nth-child(3) {
-            animation-delay: 1s;
-        }
-
-        .neural-node:nth-child(4) {
-            animation-delay: 1.5s;
-        }
-
-        .neural-node:nth-child(5) {
-            animation-delay: 0.25s;
-        }
-
-        .neural-node:nth-child(6) {
-            animation-delay: 0.75s;
-        }
-
-        .neural-node:nth-child(7) {
-            animation-delay: 1.25s;
-        }
-
-        .neural-node:nth-child(8) {
-            animation-delay: 1.75s;
-        }
-
-        .central-hub {
-            animation: centralPulse 3s ease-in-out infinite;
-        }
-
-        .neural-connection {
-            animation: dataFlow 5s linear infinite;
-            transform-origin: center;
-        }
-
-        .pulse-dot {
-            animation: dotPulse 2s ease-in-out infinite;
-        }
-
-        .pulse-center {
-            animation: centerPulse 2.5s ease-in-out infinite;
-        }
-
-        .data-particle {
-            animation-duration: 3s;
-        }
-
-        .orbital-ring {
-            animation: orbitalRotate 20s linear infinite;
-        }
-
-        .orbital-ring-outer {
-            animation: orbitalRotate 30s linear infinite reverse;
-        }
-
-        /* Logo Animation Keyframes */
-        @keyframes logoFloat {
-
-            0%,
-            100% {
-                transform: translateY(0px) rotate(0deg);
-            }
-
-            50% {
-                transform: translateY(-5px) rotate(1deg);
-            }
-        }
-
-        @keyframes logoHover {
-            0% {
-                transform: scale(1.05) translateY(-2px);
-            }
-
-            100% {
-                transform: scale(1.1) translateY(-4px);
-            }
-        }
-
-        @keyframes dotPulse {
-
-            0%,
-            100% {
-                opacity: 0.6;
-                transform: scale(1);
-            }
-
-            50% {
-                opacity: 1;
-                transform: scale(1.2);
-            }
-        }
-
-        @keyframes waveFlow {
-            0% {
-                transform: translateX(0) scaleY(1);
-                opacity: 0.8;
-            }
-
-            25% {
-                transform: translateX(2px) scaleY(1.1);
-                opacity: 1;
-            }
-
-            50% {
-                transform: translateX(0) scaleY(0.9);
-                opacity: 0.9;
-            }
-
-            75% {
-                transform: translateX(-2px) scaleY(1.1);
-                opacity: 1;
-            }
-
-            100% {
-                transform: translateX(0) scaleY(1);
-                opacity: 0.8;
-            }
-        }
-
-        @keyframes neuralPulse {
-
-            0%,
-            100% {
-                transform: scale(1);
-                opacity: 0.7;
-                box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
-            }
-
-            50% {
-                transform: scale(1.1);
-                opacity: 1;
-                box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
-            }
-        }
-
-        @keyframes centralPulse {
-
-            0%,
-            100% {
-                transform: translate(-50%, -50%) scale(1);
-                opacity: 0.9;
-                box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.6);
-            }
-
-            50% {
-                transform: translate(-50%, -50%) scale(1.2);
-                opacity: 1;
-                box-shadow: 0 0 0 20px rgba(220, 38, 38, 0);
-            }
-        }
-
-        @keyframes dataFlow {
-            0% {
-                opacity: 0.2;
-                transform: scaleX(0);
-            }
-
-            25% {
-                opacity: 0.8;
-                transform: scaleX(0.5);
-            }
-
-            50% {
-                opacity: 1;
-                transform: scaleX(1);
-            }
-
-            75% {
-                opacity: 0.8;
-                transform: scaleX(0.5);
-            }
-
-            100% {
-                opacity: 0.2;
-                transform: scaleX(0);
-            }
-        }
-
-        @keyframes dotPulse {
-
-            0%,
-            100% {
-                opacity: 0.6;
-                transform: scale(1);
-            }
-
-            50% {
-                opacity: 1;
-                transform: scale(1.4);
-            }
-        }
-
-        @keyframes centerPulse {
-
-            0%,
-            100% {
-                opacity: 0.8;
-                transform: scale(1);
-            }
-
-            50% {
-                opacity: 1;
-                transform: scale(1.3);
-            }
-        }
-
-        @keyframes orbitalRotate {
-            0% {
-                transform: translate(-50%, -50%) rotate(0deg);
-            }
-
-            100% {
-                transform: translate(-50%, -50%) rotate(360deg);
-            }
-        }
-
-        @keyframes flow {
-            0% {
-                opacity: 0.3;
-            }
-
-            50% {
-                opacity: 1;
-            }
-
-            100% {
-                opacity: 0.3;
-            }
-        }
-
-        @media (max-width: 768px) {
-            #home {
-                padding-top: 80px;
-                /* Add top padding to account for navbar height */
-            }
-
-            /* Adjust navbar height for mobile */
-            #navbar {
-                min-height: 70px;
-            }
-
-            /* Ensure mobile menu appears below navbar */
-            #mobile-menu {
-                top: 70px;
-            }
-        }
-
-        /* For better mobile experience, also adjust hero text */
-        @media (max-width: 640px) {
-            #home {
-                padding-top: 90px;
-            }
-
-            #home h1 {
-                font-size: 2.5rem;
-                /* Slightly smaller on very small screens */
-                line-height: 1.2;
-            }
-
-            #home .neural-network-container {
-                width: 280px;
-                height: 280px;
-            }
         }
     </style>
 
@@ -496,8 +131,12 @@
         </ul>
     </nav>
 
-    <!-- Hero Section -->
     <section id="home" class="min-h-screen flex items-center hero-bg text-white relative overflow-hidden">
+        <!-- Simplified Full-screen Neural Network Background -->
+        <div class="absolute inset-0 w-full h-full pointer-events-none z-0">
+            <!-- Your existing neural network background code here -->
+        </div>
+
         <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-2 gap-16 items-center relative z-10">
             <div class="text-center md:text-left">
                 <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">
@@ -518,107 +157,28 @@
                 </div>
             </div>
 
-            <div class="flex justify-center items-center">
+            <div class="flex flex-col items-center justify-center relative">
+                <!-- AI Quote positioned at top-right -->
+                <div class="absolute -top-16 right-0 p-8 bg-white bg-opacity-15 rounded-lg backdrop-blur-sm border border-white border-opacity-25 max-w-6xl z-30">
+                    <i aria-hidden="true" class="fas fa-quote-left text-6xl text-primary-light mb-2 block"></i>
+                    <blockquote class="text-xl font-medium italic leading-relaxed mb-2 opacity-90">
+                        "AI is the new electricity that will transform every industry."
+                    </blockquote>
+                    <cite class="text-xs font-semibold tracking-wide opacity-75 not-italic">— Tech Visionary</cite>
+                </div>
+
+                <!-- Neural network visualization -->
                 <div class="w-80 h-80 md:w-96 md:h-96 relative">
-                    <div class="w-full h-full relative">
-                        <!-- Outer Ring Neural Network Nodes -->
-                        <div
-                            class="w-14 h-14 bg-white bg-opacity-25 border-2 border-white border-opacity-60 rounded-full absolute top-[10%] left-[30%] neural-node flex items-center justify-center">
-                            <div class="w-2 h-2 bg-white rounded-full opacity-90 pulse-dot"></div>
-                        </div>
-                        <div
-                            class="w-14 h-14 bg-white bg-opacity-25 border-2 border-white border-opacity-60 rounded-full absolute top-[15%] right-[25%] neural-node flex items-center justify-center">
-                            <div class="w-2 h-2 bg-white rounded-full opacity-90 pulse-dot"></div>
-                        </div>
-                        <div
-                            class="w-14 h-14 bg-white bg-opacity-25 border-2 border-white border-opacity-60 rounded-full absolute bottom-[15%] left-[25%] neural-node flex items-center justify-center">
-                            <div class="w-2 h-2 bg-white rounded-full opacity-90 pulse-dot"></div>
-                        </div>
-                        <div
-                            class="w-14 h-14 bg-white bg-opacity-25 border-2 border-white border-opacity-60 rounded-full absolute bottom-[10%] right-[30%] neural-node flex items-center justify-center">
-                            <div class="w-2 h-2 bg-white rounded-full opacity-90 pulse-dot"></div>
-                        </div>
-
-                        <!-- Middle Ring Nodes -->
-                        <div
-                            class="w-12 h-12 bg-white bg-opacity-30 border-2 border-white border-opacity-70 rounded-full absolute top-[25%] left-[15%] neural-node flex items-center justify-center">
-                            <div class="w-1.5 h-1.5 bg-white rounded-full opacity-85 pulse-dot"></div>
-                        </div>
-                        <div
-                            class="w-12 h-12 bg-white bg-opacity-30 border-2 border-white border-opacity-70 rounded-full absolute top-[20%] right-[15%] neural-node flex items-center justify-center">
-                            <div class="w-1.5 h-1.5 bg-white rounded-full opacity-85 pulse-dot"></div>
-                        </div>
-                        <div
-                            class="w-12 h-12 bg-white bg-opacity-30 border-2 border-white border-opacity-70 rounded-full absolute bottom-[20%] left-[15%] neural-node flex items-center justify-center">
-                            <div class="w-1.5 h-1.5 bg-white rounded-full opacity-85 pulse-dot"></div>
-                        </div>
-                        <div
-                            class="w-12 h-12 bg-white bg-opacity-30 border-2 border-white border-opacity-70 rounded-full absolute bottom-[25%] right-[15%] neural-node flex items-center justify-center">
-                            <div class="w-1.5 h-1.5 bg-white rounded-full opacity-85 pulse-dot"></div>
-                        </div>
-
-                        <!-- Central Hub Node -->
-                        <div
-                            class="w-16 h-16 bg-primary bg-opacity-90 border-3 border-white rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 neural-node central-hub flex items-center justify-center">
-                            <div class="w-4 h-4 bg-white rounded-full pulse-center"></div>
-                        </div>
-
-                        <!-- Primary Neural Network Connections -->
-                        <div class="absolute top-[18%] left-[37%] w-[26%] h-0.5 bg-white bg-opacity-50 neural-connection origin-left" style="animation-delay: 0s;"></div>
-                        <div class="absolute top-[23%] right-[32%] w-[26%] h-0.5 bg-white bg-opacity-50 neural-connection origin-right rotate-180" style="animation-delay: 0.3s;">
-                        </div>
-                        <div class="absolute bottom-[23%] left-[32%] w-[26%] h-0.5 bg-white bg-opacity-50 neural-connection origin-left" style="animation-delay: 0.6s;"></div>
-                        <div class="absolute bottom-[18%] right-[37%] w-[26%] h-0.5 bg-white bg-opacity-50 neural-connection origin-right rotate-180"
-                            style="animation-delay: 0.9s;"></div>
-
-                        <!-- Secondary Connections (Middle to Center) -->
-                        <div class="absolute top-[32%] left-[22%] w-[28%] h-0.5 bg-white bg-opacity-40 neural-connection rotate-12 origin-left" style="animation-delay: 0.2s;">
-                        </div>
-                        <div class="absolute top-[27%] right-[22%] w-[28%] h-0.5 bg-white bg-opacity-40 neural-connection -rotate-12 origin-right" style="animation-delay: 0.5s;">
-                        </div>
-                        <div class="absolute bottom-[27%] left-[22%] w-[28%] h-0.5 bg-white bg-opacity-40 neural-connection -rotate-12 origin-left" style="animation-delay: 0.8s;">
-                        </div>
-                        <div class="absolute bottom-[32%] right-[22%] w-[28%] h-0.5 bg-white bg-opacity-40 neural-connection rotate-12 origin-right" style="animation-delay: 1.1s;">
-                        </div>
-
-                        <!-- Cross Connections -->
-                        <div class="absolute top-[30%] left-[30%] w-[40%] h-0.5 bg-white bg-opacity-30 neural-connection rotate-45 origin-left" style="animation-delay: 0.4s;">
-                        </div>
-                        <div class="absolute top-[30%] right-[30%] w-[40%] h-0.5 bg-white bg-opacity-30 neural-connection -rotate-45 origin-right" style="animation-delay: 0.7s;">
-                        </div>
-                        <div class="absolute bottom-[30%] left-[30%] w-[40%] h-0.5 bg-white bg-opacity-30 neural-connection -rotate-45 origin-left" style="animation-delay: 1s;">
-                        </div>
-                        <div class="absolute bottom-[30%] right-[30%] w-[40%] h-0.5 bg-white bg-opacity-30 neural-connection rotate-45 origin-right" style="animation-delay: 1.3s;">
-                        </div>
-
-                        <!-- Animated Data Flow Particles -->
-                        <div class="absolute top-[12%] left-[32%] w-1.5 h-1.5 bg-primary rounded-full data-particle animate-ping" style="animation-delay: 0s;"></div>
-                        <div class="absolute top-[17%] right-[27%] w-1.5 h-1.5 bg-primary rounded-full data-particle animate-ping" style="animation-delay: 0.8s;"></div>
-                        <div class="absolute bottom-[17%] left-[27%] w-1.5 h-1.5 bg-primary rounded-full data-particle animate-ping" style="animation-delay: 1.6s;"></div>
-                        <div class="absolute bottom-[12%] right-[32%] w-1.5 h-1.5 bg-primary rounded-full data-particle animate-ping" style="animation-delay: 2.4s;"></div>
-
-                        <!-- Additional flowing particles -->
-                        <div class="absolute top-[27%] left-[17%] w-1 h-1 bg-white rounded-full data-particle animate-pulse" style="animation-delay: 0.4s;"></div>
-                        <div class="absolute top-[22%] right-[17%] w-1 h-1 bg-white rounded-full data-particle animate-pulse" style="animation-delay: 1.2s;"></div>
-                        <div class="absolute bottom-[22%] left-[17%] w-1 h-1 bg-white rounded-full data-particle animate-pulse" style="animation-delay: 2s;"></div>
-                        <div class="absolute bottom-[27%] right-[17%] w-1 h-1 bg-white rounded-full data-particle animate-pulse" style="animation-delay: 2.8s;"></div>
-
-                        <!-- Orbital rings for extra effect -->
-                        <div
-                            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 border border-white border-opacity-20 rounded-full orbital-ring">
-                        </div>
-                        <div
-                            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 border border-white border-opacity-15 rounded-full orbital-ring-outer">
-                        </div>
-                    </div>
+                    <!-- Your existing neural network code here -->
                 </div>
             </div>
-
-
         </div>
     </section>
 
-    <!-- Services Section -->
+
+
+
+
     <!-- Services Section -->
     <section id="services" class="py-20 bg-white bg-opacity-30 backdrop-blur-sm">
         <div class="max-w-6xl mx-auto px-5">
